@@ -1,0 +1,131 @@
+body {
+  background-image: url("../images/background-schonbek8.jpeg");
+  background-size: cover;
+}
+
+main {
+  /* height: 300vh; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#image{
+  max-width: 100%;
+  height: auto;
+}
+
+/* html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+.about-banner {
+  background-image: url("../images/SLIDER-4_Sterling_3601-40S_x3_Living_Application_FINAL_HR_1560x800.jpg");
+  background-size: cover;
+  height: calc(100vh - 50px);
+  width: 100vw;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px rgb(0 0 0);
+}
+
+.about-banner h1 {
+  width: 80%;
+  margin: auto;
+  margin-top: 70vh;
+}
+
+.our-story {
+  border-top: 2px solid rgb(121, 109, 109);
+  border-bottom: 2px solid rgb(121, 109, 109);
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  margin-top: 20vh;
+}
+
+.our-story h1 {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.story-logo {
+  background: rgba(114, 113, 113, 0.155);
+  width: 30%;
+  padding: 50px;
+  display: flex;
+}
+
+.story-logo img {
+  inline-size: -webkit-fill-available;
+}
+
+.story-content {
+  line-height: 2;
+  font-weight: 2em;
+  padding: 79px;
+  letter-spacing: 1px;
+  color: #444343;
+  width: 70%;
+  text-shadow: 0 0 4px;
+}
+
+#faqs{
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 10vh;
+}
+
+#faqs h1 { 
+	position: relative;
+	/* font-size: 75%; */
+	opacity: .6;
+	color: #0064ff;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+#faqs h2 {
+	font-size: 120%;
+	padding: .25em 0 .25em 25px;
+	background: url(../images/plus.png) no-repeat left center;
+}
+#faqs h2.minus {
+	background: url(../images/minus.png) no-repeat left center;
+}
+#faqs a {
+    color: black;
+    text-decoration: none; 
+}
+#faqs a:focus, a:hover {
+	color: blue;
+}
+#faqs div {
+	display: none;
+}
+#faqs ul {
+	padding-left: 45px;
+}
+#faqs li {
+	padding-bottom: .25em;
+}
+#faqs p {
+	padding-bottom: .25em;
+	padding-left: 25px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .story-logo {
+    display: none;
+  }
+
+  .story-content {
+    width: 100%;
+  }
+}

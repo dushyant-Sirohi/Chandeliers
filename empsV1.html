@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="http://185.113.4.41:7001/jTable/jquery.jtable.js"></script>
+        <script src="http://185.113.4.41:7001/jTable/helpers.js"></script>
+
+        <!-- Do not change the code above -->
+
+        <link href="http://185.113.4.41:7001/jTable/themes/lightcolor/red/jtable.css" rel="stylesheet" />
+        <!-- Additional themes below
+        <link href="http://185.113.4.41:7001/jTable/themes/lightcolor/gray/jtable.css" rel="stylesheet">
+        <link href="http://185.113.4.41:7001/jTable/themes/lightcolor/green/jtable.css" rel="stylesheet">
+        <link href="http://185.113.4.41:7001/jTable/themes/lightcolor/orange/jtable.css" rel="stylesheet">
+        <link href="http://185.113.4.41:7001/jTable/themes/lightcolor/blue/jtable.css" rel="stylesheet">
+        <link href="http://185.113.4.41:7001/jTable/themes/metro/lightgray/jtable.css" rel="stylesheet">
+        <link href="http://185.113.4.41:7001/jTable/themes/metro/red/jtable.css" rel="stylesheet">
+        -->
+
+        <link href="http://185.113.4.41:7001/css/mvc.css" rel="stylesheet" />  
+
+        <title>Employee Listing with JS functions</title>                      
+
+        <script>
+            $(document).ready(function () {
+                $("#container1").jtable({
+                    title: "Employees with JS Functions",
+                    paging: true,
+                    pageSize: 11,
+                    sorting: true,
+                    defaultSorting: "hire_date DESC",
+                    actions: {
+                        listAction: "genJson2.aspx?jtView=empV1",
+                    },
+                    fields: {
+                        first_name: {
+                            title: "First name",
+                            width: "10%",
+                        },
+
+                        last_name: {
+                            title: "Last name",
+                            width: "10%",
+                        },
+
+                        emp_id: {
+                            key: true,
+                            title: "Emp ID",
+                            width: "10%",
+                        },
+
+                        gender: {
+                            title: "Gender",
+                            width: "10%",
+                            options: { M: "Male", F: "Female" },
+                        },
+
+                        phone: {
+                            title: "Phone",
+                            width: "15%",
+                            display: function (data) {
+                                return formatPhoneNumber(data.record.phone);
+                            },
+                        },
+
+                        hire_date: {
+                            title: "Hire date",
+                            width: "10%",
+                            type: "date",
+                            displayFormat: "mm/dd/yy",
+                        },
+
+                        hourly_rate: {
+                            title: "Hourly Rate",
+                            width: "10%",
+                            display: function (data) {
+                                return formatCurrency(data.record.hourly_rate);
+                            },
+                        },
+
+                        comm_pct: {
+                            title: "Comm Pct",
+                            width: "10%",
+                            display: function (data) {
+                                return formatPercent(data.record.comm_pct);
+                            },
+                        },
+                    },
+                });
+                $("#container1").jtable("load");
+            });
+        </script>
+    </head>
+
+    <body>                                                  <!-- Add code below to modify the web page-->
+        <div id="container1" style="width: 60%;"></div>     <!-- Modify the width of the grid -->
+    </body>
+</html>

@@ -1,0 +1,112 @@
+.specialbody {
+  background: linear-gradient(90deg, #abbbd1 0%, rgb(253 254 252) 100%);
+}
+
+.specialbanner {
+  width: 100%;
+  height: 400px;
+}
+
+.specialbanner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.special-product {
+  margin-left: 5%;
+  float: left;
+  width: 50%;
+  height: 300px;
+}
+
+.special {
+  margin-top: -10%;
+  width: 100%;
+  height: 500px;
+}
+
+.special-product img {
+  border: 1px solid #ff9800;
+  border-radius: 4px;
+  padding: 5px;
+  width: 50%;
+  transform: scale(1.1);
+}
+
+/* Add a hover effect (blue shadow) */
+.special-productimg:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.spectial-content {
+  float: right;
+  margin-right: 10%;
+  margin-top: -20%;
+  width: 50%;
+  height: 500px;
+}
+
+h2 {
+  padding: 11px;
+  color: #ffff;
+  background-color: #0666f7;
+  opacity: 0.8;
+  text-align: center;
+  border-radius: 12px;
+}
+
+h2:hover {
+  color: rgb(79, 93, 172);
+}
+
+h3 {
+  color: rgb(79, 93, 172);
+}
+
+h3:hover {
+  color: #915803;
+}
+
+.spectial-content li {
+  list-style-type: square;
+  color: #0666f7;
+  font-size: 1.2em;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .special {
+    margin-top: 1%;
+  }
+
+  .special-product {
+    display: block;
+    margin-top: -50%;
+    width: 100%;
+    height: 400px;
+    margin-left: 20%;
+    margin-right: 5%;
+  }
+
+  .special-product img {
+    width: 60%;
+    height: auto;
+  }
+
+  .spectial-content {
+    margin-top: -15%;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    display: block;
+  }
+
+  .spectial-content li {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .spfooter {
+    margin-bottom: 30%;
+  }
+}
